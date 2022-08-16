@@ -1,0 +1,46 @@
+/**
+  |============================
+  | Стилізація Header-у
+  |============================
+*/
+
+.header {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #ECECEC;
+}
+/*
+.header__container {
+    display: flex;
+    align-items: center;
+}
+*/
+.main-nav {
+    display: flex;
+    justify-content: space-between;       
+}
+
+.main-nav__menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+}
+
+.main-nav__icon-close {
+    display: none;
+
+    .main-nav__menu-button.is-open & {
+        display: block;
+    }
+
+}
+
+.main-nav__menu-button.is-open .main-nav__icon-menu {
+    display: none;
+}

@@ -1,0 +1,63 @@
+/**
+  |============================
+  | Стилі для секції з клієнтами
+  |============================
+*/
+
+.clients {
+    @extend %list;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  
+    @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    }   
+    
+}
+
+.clients__link {
+    @include centeredFlex;
+    
+    cursor: pointer;
+    width:  210px;                    
+    height: 92px;
+
+    fill: $icon-main-color;
+    border: 1px solid $icon-main-color;
+    border-radius: 4px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    @media screen and (min-width: 768px) {
+        width: 226px;
+        height: 92px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 170px;
+        height: 92px;
+      }
+
+    &:hover,
+    &:focus {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+    }
+}
+
+.clients__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+
+    @media screen and (min-width: 768px) {
+    width: calc((100% - 3 * 30px) / 3);
+    
+    }
+    
+    @media screen and (min-width: 1200px) {
+    width: calc(100% / 6);
+    }
+
+}
