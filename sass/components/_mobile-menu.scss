@@ -1,0 +1,62 @@
+.menu-container {
+    padding: 48px 40px;
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    
+}
+
+.mobile-nav {
+    @extend %list;
+    
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    
+    &__link {
+        text-decoration: none;
+    }
+    
+}
+
+.mobile-contact {
+    @extend %list;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    &__link {
+        text-decoration: none;
+    }
+
+
+    &__item:first-child {
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+    }
+}
+
+
+.mobile-social {
+    @extend %list;
+    display: flex;
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+
+    &__item + &__item {
+        padding-left: 10px;
+        margin-left: 10px;
+        border-left: 1px solid rgba(33, 33, 33, 0.2);
+            
+    }
+
+}
