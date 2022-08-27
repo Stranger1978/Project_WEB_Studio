@@ -420,7 +420,16 @@ img {
   padding: 48px 40px;
   width: 100vw;
   height: 100vh;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -464,7 +473,9 @@ img {
 }
 
 .mobile-nav {
-  margin-bottom: 302px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .mobile-nav__item + .mobile-nav__item {
   margin-top: 32px;
@@ -475,6 +486,7 @@ img {
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
+  color: #212121;
 }
 .mobile-nav__link--current {
   color: #2196F3;
@@ -854,7 +866,6 @@ img {
 @media screen and (min-width: 1200px) {
   .section__title {
     margin-bottom: 50px;
-    padding-bottom: 94px;
     font-size: 36px;
     line-height: 1.17;
   }
@@ -1537,8 +1548,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    height: 581px;
-    width: 528px;
+    max-height: 581px;
+    max-width: 528px;
   }
 }
 
@@ -1573,7 +1584,7 @@ img {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 2; /*1.15;*/
+  line-height: 1.5; /*1.15;*/
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
